@@ -654,7 +654,7 @@ video {
 
 /* index page */
 
-.button {
+button {
   background-color: rgb(253 186 116 / 0.5);
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -663,9 +663,16 @@ video {
   transition-duration: 150ms;
 }
 
-.button:hover {
+button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity, 1));
+}
+
+button:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity, 1));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 input {

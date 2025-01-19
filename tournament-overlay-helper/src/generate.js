@@ -26,6 +26,25 @@ const tournament_stage = document.getElementById("tournament_stage")
 
 const copy_overlay = document.getElementById("copy_overlay")
 
+player_to_add.addEventListener("keydown", function (pressed) {
+    console.log("a");
+    if (pressed.key === "Enter" && player_to_add.value !== "") {
+        player_left.insertAdjacentHTML("beforeend", html`
+        <option>${player_to_add.value}</option>`)
+        player_right.insertAdjacentHTML("beforeend", html`
+        <option>${player_to_add.value}</option>`)
+        player_to_add.value = ""
+    }
+})
+
+map_to_add.addEventListener("keydown", function (pressed) {
+    if (pressed.key === "Enter" && map_to_add.value !== "") {
+        map_name.insertAdjacentHTML("beforeend", html`
+        <option>${map_to_add.value}</option>`)
+        map_to_add.value = ""
+    }
+})
+
 add_player.addEventListener("mousedown", function () {
     if (player_to_add.value !== "") {
         player_left.insertAdjacentHTML("beforeend", html`
