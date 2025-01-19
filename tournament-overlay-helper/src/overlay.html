@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>overlay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet" />
+    <meta name="darkreader-lock">
+</head>
+
+<body class="size-full font-outfit text-white">
+    <div class="header-wrapper">
+        <div class="player-info-container bg-gradient-to-r">
+            <img id="flag_left" src="https://countryflagsapi.netlify.app/flag/US.svg" />
+            <div class="player-name">
+                <span id="player_left">McDonalds</span>
+            </div>
+            <div class="player-score flex gap-2 items-center ml-auto">
+                <div class="score-box"></div>
+                <div class="score-box"></div>
+                <div class="score-box"></div>
+            </div>
+            <div class="player-pr">
+                <span>PR</span>
+                <span id="pr_left">3:52</span>
+            </div>
+        </div>
+        <div class="round-info">
+        </div>
+        <div class="player-info-container bg-gradient-to-l flex-row-reverse">
+            <img id="flag_right" src="https://countryflagsapi.netlify.app/flag/GB.svg" />
+            <div class="player-name">
+                <span id="player_right">Burger</span>
+            </div>
+            <div class="player-score flex gap-2 items-center mr-auto flex-row-reverse">
+                <div class="score-box"></div>
+                <div class="score-box"></div>
+                <div class="score-box"></div>
+            </div>
+            <div class="player-pr">
+                <span>PR</span>
+                <span id="pr_right">3:50</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="player-povs"></div>
+    <div class="more-round-info-wrapper">
+        <div class="more-round-info">
+            <div id="map_name" class="text-4xl">jump_beef</div>
+            <div id="tournament-stage" class="text-3xl">Semifinals</div>
+        </div>
+    </div>
+</body>
+
+<script src="./overlay.js"></script>
+
+</html>
