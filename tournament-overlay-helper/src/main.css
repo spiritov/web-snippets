@@ -601,6 +601,12 @@ video {
   line-height: 2.25rem;
 }
 
+.player-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .score-box {
   width: 2rem;
   height: 2rem;
@@ -790,11 +796,6 @@ select > option {
 .bg-orange-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity, 1));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-l {
