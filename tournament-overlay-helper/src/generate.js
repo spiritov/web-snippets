@@ -59,15 +59,15 @@ clear_inputfields.addEventListener("mousedown", function () {
 
 copy_overlay.addEventListener("mousedown", function () {
     navigator.clipboard.writeText(`https://spiritov.github.io/web-snippets/tournament-overlay-helper/overlay.html
-    // lplayer=${player_left.value}&
-    // lflag=${flag_left.value}&
-    // lpr=${pr_left.value}&
-    // lscore=${score_left.value}&
-    // rplayer=${player_right.value}&
-    // rflag=${flag_right.value}&
-    // rpr=${pr_right.value}&
-    // rscore=${score_right.value}&
-    // bestof=${best_of.value}&
-    // map=${map_name.value}&
-    // stage=${tournament_stage.value}`);
+    lplayer=${player_left.value}&
+    lflag=${flag_left.value}&
+    lpr=${pr_left.value}&
+    lscore=${score_left.value}&
+    rplayer=${player_right.value}&
+    rflag=${flag_right.value}&
+    rpr=${pr_right.value}&
+    rscore=${score_right.value}&
+    bestof=${best_of.value}&
+    map=${map_name.value}&
+    stage=${tournament_stage.value}`);
 })
