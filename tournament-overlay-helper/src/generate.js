@@ -11,9 +11,18 @@ const clear_inputfields = document.getElementById("clear_inputfields")
 const player_to_add = document.getElementById("player_to_add")
 const map_to_add = document.getElementById("map_to_add")
 
+//URL parameters
 const player_left = document.getElementById("player_left")
 const player_right = document.getElementById("player_right")
+const flag_left = document.getElementById("flag_left")
+const flag_right = document.getElementById("flag_right")
+const pr_left = document.getElementById("pr_left")
+const pr_right = document.getElementById("pr_right")
+const score_left = document.getElementById("score_left")
+const score_right = document.getElementById("score_right")
+const best_of = document.getElementById("best_of")
 const map_name = document.getElementById("map_name")
+const tournament_stage = document.getElementById("tournament_stage")
 
 const copy_overlay = document.getElementById("copy_overlay")
 
@@ -49,5 +58,16 @@ clear_inputfields.addEventListener("mousedown", function () {
 })
 
 copy_overlay.addEventListener("mousedown", function () {
-    navigator.clipboard.writeText("https://spiritov.github.io/web-snippets/speedrun tournament overlay helper/overlay.html");
+    navigator.clipboard.writeText(`https://spiritov.github.io/web-snippets/tournament-overlay-helper/overlay.html
+    // lplayer=${player_left.value}&
+    // lflag=${flag_left.value}&
+    // lpr=${pr_left.value}&
+    // lscore=${score_left.value}&
+    // rplayer=${player_right.value}&
+    // rflag=${flag_right.value}&
+    // rpr=${pr_right.value}&
+    // rscore=${score_right.value}&
+    // bestof=${best_of.value}&
+    // map=${map_name.value}&
+    // stage=${tournament_stage.value}`);
 })
