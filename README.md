@@ -5,7 +5,7 @@
 
 [tf2 jump / general speedrunning tournament overlay helper](https://spiritov.github.io/web-snippets/tournament-overlay-helper/generate.html)
 | generates a webpage intended to be used as a stream overlay as a browser source. URL must be re-copied as a tournament progresses, since this is only a static site utilizing URL query parameters. However, you can click / interact with the score if other elements on the page don't need to be changed.
-```markdown
+
 > [!NOTE]
-> let me know if you'd like to see this expanded upon! 
-```
+> Let me know if you'd like to see this expanded upon!
+
