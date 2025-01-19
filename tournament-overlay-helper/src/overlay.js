@@ -13,7 +13,6 @@ const tournament_stage = document.getElementById("tournament_stage")
 //https://countryflagsapi.netlify.app/flag/US.svg
 
 var scoreBoxes = document.getElementsByClassName("score-box");
-console.log(scoreBoxes);
 
 //actually, this isn't needed but may find use on the index page instead
 for (let i = 0; i < scoreBoxes.length; i++) {
@@ -31,6 +30,6 @@ player_right.innerText = params.get("rplayer")
 flag_right.src = `https://countryflagsapi.netlify.app/flag/${params.get("rflag")}.svg`
 pr_right.innerText = params.get("rpr");
 score_right.innerText = params.get("rscore")
-const best_of = params.get("bestof")
-map_name = params.get("map")
-tournament_stage = params.get("stage")
+let best_of = params.get("bestof")
+map_name.innerText = params.get("map")
+tournament_stage.innerText = params.get("stage")
