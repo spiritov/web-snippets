@@ -756,16 +756,48 @@ select > option {
   height: 100%;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
 .w-full {
   width: 100%;
 }
 
-.basis-1\/2 {
-  flex-basis: 50%;
+.w-10 {
+  width: 2.5rem;
 }
 
-.basis-auto {
-  flex-basis: auto;
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .flex-row-reverse {
@@ -784,6 +816,10 @@ select > option {
   justify-content: flex-start;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -796,6 +832,14 @@ select > option {
   border-radius: 0.5rem;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border-white\/50 {
+  border-color: rgb(255 255 255 / 0.5);
+}
+
 .bg-black\/25 {
   background-color: rgb(0 0 0 / 0.25);
 }
@@ -803,6 +847,10 @@ select > option {
 .bg-orange-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity, 1));
+}
+
+.bg-orange-300\/50 {
+  background-color: rgb(253 186 116 / 0.5);
 }
 
 .bg-gradient-to-l {
@@ -815,6 +863,11 @@ select > option {
 
 .p-8 {
   padding: 2rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .text-center {
@@ -862,6 +915,10 @@ select > option {
 
 .opacity-60 {
   opacity: 0.6;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur-sm {

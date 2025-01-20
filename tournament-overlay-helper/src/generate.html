@@ -20,17 +20,24 @@
     <div class="flex flex-col text-xl font-outfit text-white mt-16 bg-black/25 backdrop-blur-sm p-8 rounded-lg">
         <div class="flex">
             <input class="text-center w-full" id="player_to_add" />
-            <button class="basis-auto" id="add_player">add player</button>
+            <button class="w-32" id="add_player">add player</button>
         </div>
 
         <div class="flex mt-4">
             <input class="text-center w-full" id="map_to_add" />
-            <button class="" id="add_map">add map</button>
+            <button class="w-32" id="add_map">add map</button>
         </div>
 
-        <div class="flex gap-2 mt-4 w-full">
-            <button class="basis-1/2" id="clear_selectfields">clear all maps & players</button>
-            <button class="basis-1/2" id="clear_inputfields">clear all input fields</button>
+        <div class="flex mt-4">
+            <input class="text-center w-full" id="stage_to_add" />
+            <button class="w-32" id="add_stage">add stage</button>
+        </div>
+
+        <div class="flex gap-2 mt-4 w-full justify-center">
+            <button class="px-2" id="clear_players">clear players</button>
+            <button class="px-2" id="clear_maps">clear maps</button>
+            <button class="px-2" id="clear_stages">clear stages</button>
+            <button class="px-2" id="clear_inputfields">clear input fields</button>
         </div>
         <ul class="flex gap-8">
             <li class="flex flex-col">
@@ -80,7 +87,7 @@
         <select id="map_name"></select>
 
         <label for="tournament_stage">tournament stage</label>
-        <select class="mb-8" id="tournament_stage">
+        <select class="" id="tournament_stage">
             <option>Round 1</option>
             <option>Round 2</option>
             <option>Round 3</option>
@@ -89,7 +96,7 @@
             <option>Finals</option>
         </select>
 
-        <button class="" id="copy_overlay">copy overlay webpage url</button>
+        <button class="mt-8" id="copy_overlay">copy overlay webpage url</button>
     </div>
 </body>
 

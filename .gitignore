@@ -145,4 +145,3 @@ dist
 tournament-overlay-helper/package-lock.json
 tournament-overlay-helper/.prettierrc
 tournament-overlay-helper/package.json
-tournament-overlay-helper/src/styles.css

@@ -14,7 +14,6 @@ const score_right = document.getElementById("score_right")
 const map_name = document.getElementById("map_name")
 const tournament_stage = document.getElementById("tournament_stage")
 
-
 function getScoreBoxesHTML(score, best_of) {
     let currentScore = score;
     let returnHTML = []

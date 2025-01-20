@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply appearance-none;
+  }
+
+  .header-wrapper {
+    @apply flex h-20 w-full;
+  }
+
+  .player-info-container {
+    @apply relative flex basis-5/12 gap-4 from-black/50 from-60% to-orange-300/50 to-100%;
+  }
+
+  .player-name {
+    @apply flex items-center justify-start gap-2 py-2 text-4xl font-semibold;
+  }
+
+  .player-pr {
+    @apply flex flex-col items-center justify-center p-2 text-3xl;
+  }
+
+  .player-score {
+    @apply flex items-center gap-2;
+  }
+
+  .score-box {
+    @apply size-8 border-4 border-white/50 transition-colors duration-300;
+  }
+
+  .round-info {
+    @apply flex basis-2/12 bg-orange-300/50;
+  }
+
+  .more-round-info-wrapper {
+    @apply flex h-fit w-full justify-center;
+  }
+
+  .more-round-info {
+    @apply flex basis-2/12 flex-col items-center justify-between gap-2 rounded-b-[2rem] bg-orange-300/50 p-3;
+  }
+
+  .player-povs {
+    @apply h-[540px] w-full bg-white/50;
+  }
+
+  /* index page */
+  @layer components {
+    button {
+      @apply bg-orange-300/50 text-black transition-all hover:bg-orange-300 focus:bg-orange-300 focus:outline-none;
+    }
+
+    input {
+      @apply border-2 border-white/50 bg-black pl-1 text-lg focus:outline-none;
+    }
+
+    select {
+      @apply border-2 border-white/50 bg-black pl-1 text-lg focus:outline-none;
+    }
+
+    select > option {
+      @apply font-outfit text-lg;
+    }
+  }
+}

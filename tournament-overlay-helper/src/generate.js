@@ -4,12 +4,16 @@ const html = htm.bind(vhtml);
 
 const add_player = document.getElementById("add_player")
 const add_map = document.getElementById("add_map")
+const add_stage = document.getElementById("add_stage")
 
-const clear_selectfields = document.getElementById("clear_selectfields")
+const clear_players = document.getElementById("clear_players")
+const clear_maps = document.getElementById("clear_maps")
+const clear_stages = document.getElementById("clear_stages")
 const clear_inputfields = document.getElementById("clear_inputfields")
 
 const player_to_add = document.getElementById("player_to_add")
 const map_to_add = document.getElementById("map_to_add")
+const stage_to_add = document.getElementById("stage_to_add")
 
 //URL parameters
 const player_left = document.getElementById("player_left")
@@ -23,6 +27,8 @@ const score_right = document.getElementById("score_right")
 const best_of = document.getElementById("best_of")
 const map_name = document.getElementById("map_name")
 const tournament_stage = document.getElementById("tournament_stage")
+const overlay_color = document.getElementById("overlay_color")
+const color_preview = document.getElementById("color_preview")
 
 const copy_overlay = document.getElementById("copy_overlay")
 
@@ -45,6 +51,14 @@ map_to_add.addEventListener("keydown", function (pressed) {
     }
 })
 
+stage_to_add.addEventListener("keydown", function (pressed) {
+    if (pressed.key === "Enter" && stage_to_add.value !== "") {
+        tournament_stage.insertAdjacentHTML("beforeend", html`
+        <option>${stage_to_add.value}</option>`)
+        stage_to_add.value = ""
+    }
+})
+
 add_player.addEventListener("mousedown", function () {
     if (player_to_add.value !== "") {
         player_left.insertAdjacentHTML("beforeend", html`
@@ -63,17 +77,48 @@ add_map.addEventListener("mousedown", function () {
     }
 })
 
-clear_selectfields.addEventListener("mousedown", function () {
+add_stage.addEventListener("mousedown", function () {
+    if (stage_to_add.value !== "") {
+        tournament_stage.insertAdjacentHTML("beforeend", html`
+        <option>${stage_to_add.value}</option>`)
+        stage_to_add.value = ""
+    }
+})
+
+
+
+
+
+clear_players.addEventListener("mousedown", function () {
     player_left.innerHTML = ""
     player_right.innerHTML = ""
+})
+
+clear_maps.addEventListener("mousedown", function () {
     map_name.innerHTML = ""
 })
 
+clear_stages.addEventListener("mousedown", function () {
+    tournament_stage.innerHTML = ""
+    tournament_stage.insertAdjacentHTML("beforeend", html`
+        <option>Round 1</option>
+        <option>Round 2</option>
+        <option>Round 3</option>
+        <option>Quarterfinals</option>
+        <option>Semifinals</option>
+        <option>Finals</option>`)
+})
+
 clear_inputfields.addEventListener("mousedown", function () {
-    const inputs = document.getElementsByTagName("input");
+    const inputs = document.getElementsByTagName("input")
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].value = ""
     }
+})
+
+overlay_color.addEventListener("input", (event) => {
+    color_preview.style.filter = `hue-rotate(${event.target.value}deg)`
+    console.log(event.target.value)
 })
 
 copy_overlay.addEventListener("mousedown", function () {
