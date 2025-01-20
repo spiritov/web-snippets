@@ -1,5 +1,3 @@
-# Static Web Snippets
-
 [tf2 rocket & sticky moving background](https://spiritov.github.io/web-snippets/jumple%20active%20background/index.html)
 > originally created for [jumple](https://github.com/spiritov/jumple), but included here to make it easy to use in other projects!
 
