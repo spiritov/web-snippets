@@ -27,8 +27,6 @@ const score_right = document.getElementById("score_right")
 const best_of = document.getElementById("best_of")
 const map_name = document.getElementById("map_name")
 const tournament_stage = document.getElementById("tournament_stage")
-const overlay_color = document.getElementById("overlay_color")
-const color_preview = document.getElementById("color_preview")
 
 const copy_overlay = document.getElementById("copy_overlay")
 
@@ -85,10 +83,6 @@ add_stage.addEventListener("mousedown", function () {
     }
 })
 
-
-
-
-
 clear_players.addEventListener("mousedown", function () {
     player_left.innerHTML = ""
     player_right.innerHTML = ""
@@ -114,11 +108,6 @@ clear_inputfields.addEventListener("mousedown", function () {
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].value = ""
     }
-})
-
-overlay_color.addEventListener("input", (event) => {
-    color_preview.style.filter = `hue-rotate(${event.target.value}deg)`
-    console.log(event.target.value)
 })
 
 copy_overlay.addEventListener("mousedown", function () {
