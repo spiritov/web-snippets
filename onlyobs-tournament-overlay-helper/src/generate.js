@@ -126,5 +126,5 @@ copy_overlay.addEventListener("mousedown", function () {
 
 document.getElementById("copyoverlaypage").addEventListener("mousedown", function () {
     navigator.clipboard.writeText(
-        "${window.location.origin}/web-snippets/tournament-overlay-helper/src/overlay.html")
+        `${window.location.origin}/web-snippets/tournament-overlay-helper/src/overlay.html`)
 })
