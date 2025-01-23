@@ -145,3 +145,6 @@ dist
 tournament-overlay-helper/package-lock.json
 tournament-overlay-helper/.prettierrc
 tournament-overlay-helper/package.json
+onlyobs-tournament-overlay-helper/package.json
+onlyobs-tournament-overlay-helper/package-lock.json
+onlyobs-tournament-overlay-helper/.prettierrc

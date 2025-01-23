@@ -31,7 +31,6 @@ const tournament_stage = document.getElementById("tournament_stage")
 const copy_overlay = document.getElementById("copy_overlay")
 
 player_to_add.addEventListener("keydown", function (pressed) {
-    console.log("a");
     if (pressed.key === "Enter" && player_to_add.value !== "") {
         player_left.insertAdjacentHTML("beforeend", html`
         <option>${player_to_add.value}</option>`)
@@ -111,6 +110,21 @@ clear_inputfields.addEventListener("mousedown", function () {
 })
 
 copy_overlay.addEventListener("mousedown", function () {
+    //use local storage instead
+    localStorage.setItem("player_left", player_left.value)
+    localStorage.setItem("player_right", player_right.value)
+    localStorage.setItem("flag_left", flag_left.value)
+    localStorage.setItem("flag_right", flag_right.value)
+    localStorage.setItem("pr_left", pr_left.value)
+    localStorage.setItem("pr_right", pr_right.value)
+    localStorage.setItem("score_left", score_left.value)
+    localStorage.setItem("score_right", score_right.value)
+    localStorage.setItem("bestof", best_of.value)
+    localStorage.setItem("map", map_name.value)
+    localStorage.setItem("stage", tournament_stage.value)
+})
+
+document.getElementById("copyoverlaypage").addEventListener("mousedown", function () {
     navigator.clipboard.writeText(
-        `${window.location.origin}/web-snippets/tournament-overlay-helper/src/overlay.html?lplayer=${player_left.value}&lflag=${flag_left.value}&lpr=${pr_left.value}&lscore=${score_left.value}&rplayer=${player_right.value}&rflag=${flag_right.value}&rpr=${pr_right.value}&rscore=${score_right.value}&bestof=${best_of.value}&map=${map_name.value}&stage=${tournament_stage.value}`);
+        "${window.location.origin}/web-snippets/tournament-overlay-helper/src/overlay.html")
 })

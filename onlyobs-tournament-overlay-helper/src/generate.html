@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>overlay helper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet" />
+    <link href="./jumplebg.css" rel="stylesheet" />
+    <meta name="darkreader-lock">
+</head>
+
+<div class="-z-10" id="background_container">
+    <div id="background_pattern"></div>
+</div>
+<div class="-z-10" id="background_gradient"></div>
+
+<body class="size-full z-10 relative flex flex-col items-center justify-start">
+    <div class="flex flex-col text-xl font-outfit text-white mt-8 bg-black/25 backdrop-blur-sm p-8 rounded-lg">
+        <div class="flex mb-2">
+            <button id="copyoverlaypage">copy overlay page URL</button>
+        </div>
+
+        <div class="flex mb-2">
+            <input class="text-center w-full" id="player_to_add" />
+            <button class="w-32" id="add_player">add player</button>
+        </div>
+
+        <div class="flex mt-3">
+            <input class="text-center w-full" id="map_to_add" />
+            <button class="w-32" id="add_map">add map</button>
+        </div>
+
+        <div class="flex mt-4">
+            <input class="text-center w-full" id="stage_to_add" />
+            <button class="w-32" id="add_stage">add stage</button>
+        </div>
+
+        <div class="flex gap-2 mt-4 w-full justify-center">
+            <button class="px-2" id="clear_players">clear players</button>
+            <button class="px-2" id="clear_maps">clear maps</button>
+            <button class="px-2" id="clear_stages">reset stages</button>
+            <button class="px-2" id="clear_inputfields">clear input fields</button>
+        </div>
+
+        <span class="mt-4">use up / down arrow keys to select an option via OBS</span>
+
+        <ul class="flex gap-8">
+            <li class="flex flex-col">
+                <label class="underline decoration-orange-300 mt-8 text-center" for="player_left">left player</label>
+                <select id="player_left">
+
+                </select>
+
+                <label for="flag_left">
+                    <a href="https://countryflagsapi.netlify.app/country-list" target="_blank">flag code
+                        <span class="text-violet-500 opacity-60 hover:opacity-100 hover:underline">link</span>
+                    </a>
+                </label>
+                <input placeholder="Alpha-2 code" id="flag_left" />
+
+                <label for="pr_left">map pr</label>
+                <input id="pr_left" />
+
+                <label for="score_left">score</label>
+                <input id="score_left" />
+            </li>
+
+            <li class="flex flex-col">
+                <label class="underline decoration-orange-300 mt-8 text-center" for="player_right">right player</label>
+                <select id="player_right">
+
+                </select>
+
+                <label for="flag_right">
+                    <a href="https://countryflagsapi.netlify.app/country-list" target="_blank">flag code
+                        <span class="text-violet-500 opacity-60 hover:opacity-100 hover:underline">link</span>
+                    </a>
+                </label>
+                <input placeholder="Alpha-2 code" id="flag_right" />
+
+                <label for="pr_right">map pr</label>
+                <input id="pr_right" />
+
+                <label for="score_right">score</label>
+                <input id="score_right" />
+            </li>
+        </ul>
+
+        <label class="mt-8" for="best_of">best of</label>
+        <input id="best_of" />
+        <label for="map_name">map name</label>
+        <select id="map_name"></select>
+
+        <label for="tournament_stage">tournament stage</label>
+        <select class="" id="tournament_stage">
+            <option>Round 1</option>
+            <option>Round 2</option>
+            <option>Round 3</option>
+            <option>Quarterfinals</option>
+            <option>Semifinals</option>
+            <option>Finals</option>
+        </select>
+
+        <button class="mt-8 h-12" id="copy_overlay">update overlay</button>
+    </div>
+</body>
+
+<script src="./generate.js" type="module"></script>
+
+</html>
